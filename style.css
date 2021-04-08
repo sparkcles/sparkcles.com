@@ -7,12 +7,25 @@ purple text: "color": "#39004d"
 
 */
 
+@font-face {
+    font-family: 'no_virusregular';
+    src: url('no_virus-webfont.woff2') format('woff2'),
+         url('no_virus-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
   background-color: #ffb3d9;
 }
 
 h1 {
-	color: 	#FFFACD;
+	color: #00e6b8;
+	font-family: 'no_virusregular', serif;
+	/*font-family: 'New Tegomin', serif;*/
+	font-weight: 100;
+	font-size: 40px;
 }
 
 #collection-component-1617744041727 {
