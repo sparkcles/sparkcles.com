@@ -17,7 +17,17 @@ purple text: "color": "#39004d"
 }
 
 body {
-  background-color: #ffb3d9;
+	/* lighter */
+	background-color: #ffe6f2;
+	
+	/* original
+	background-color: #ff99cc;
+	*/
+
+
+	/* darker
+	background-color: #ffb3d9;
+	*/
 }
 
 h1 {
