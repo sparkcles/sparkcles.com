@@ -8,7 +8,7 @@
         $mailFrom = $_POST['date'];
         $name = $_POST['type'];
 
-        $mailTo = " sparkcles@mail.com";
+        $mailTo = "sparkcles@mail.com";
         $headers = "From: ".$nameFrom;
         $txt = "New contact from " .$name.".\n\n".$message;
 
