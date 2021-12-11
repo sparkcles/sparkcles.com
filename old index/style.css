@@ -1,0 +1,49 @@
+/*
+COLORS:
+light yellow-orange #ffd480
+dark yellow-orange #ffcc66
+
+purple text: "color": "#39004d"
+
+*/
+
+@font-face {
+    font-family: 'no_virusregular';
+    src: url('no_virus-webfont.woff2') format('woff2'),
+         url('no_virus-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	/* lighter
+	background-color: #ffe6f2;
+	*/
+
+	/* darker
+	background-color: #ff99cc;
+	*/
+
+
+	
+	background-color: #ffcce5;
+
+	/* original 
+	background-color: #ffb3d9;
+	*/
+}
+
+h1 {
+	color: #00e6b8;
+	font-family: 'no_virusregular', serif;
+	/*font-family: 'New Tegomin', serif;*/
+	font-weight: 100;
+	font-size: 40px;
+	padding-top: 0;
+}
+
+#collection-component-1617744041727 {
+    margin-top: 10px;
+    padding-top: 30px;
+}

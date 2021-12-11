@@ -1,987 +1,2093 @@
 <!DOCTYPE html>
-<title>
-    Sparckles
-</title>
+<html lang="en">
 
-
-<html>
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
-    <script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sparkcles</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    h1 {
+      font-family: 'confectionregular';
     }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'sparkcles.myshopify.com',
-      storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: '264016625816',
-        node: document.getElementById('collection-component-1617744041727'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px",
-          "width": "calc(25% - 20px)"
-        },
-        "img": {
-          "height": "calc(100% - 15px)",
-          "position": "absolute",
-          "left": "0",
-          "right": "0",
-          "top": "0"
-        },
-        "imgWrapper": {
-          "padding-top": "calc(75% + 15px)",
-          "position": "relative",
-          "height": "0"
-        }
-      },
-      "title": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px"
-      },
-      "button": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "20px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        "color": "#39004d",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "price": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "22px",
-        "color": "#26cbd2",
-        "font-weight": "bold"
-      },
-      "compareAt": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "13.6px",
-        "color": "#26cbd2"
-      },
-      "unitPrice": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "13.6px",
-        "color": "#26cbd2"
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        },
-        "color": "#39004d"
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px",
-        "color": "#4c4c4c"
-      },
-      "price": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "18px",
-        "color": "#4c4c4c"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      },
-      "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      }
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ],
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-        "button": {
-        "color": "#39004d",
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "color": "#39004d",
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "background-color": "#ffd480",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      },
-      "count": {
-        "font-size": "16px"
-      }
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  }
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-    </script>
+  </style>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly - v3.7.0
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 
 
-    <script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'sparkcles.myshopify.com',
-      storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: '264132100248',
-        node: document.getElementById('collection-component-1617904324375'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px",
-          "width": "calc(25% - 20px)"
-        },
-        "img": {
-          "height": "calc(100% - 15px)",
-          "position": "absolute",
-          "left": "0",
-          "right": "0",
-          "top": "0"
-        },
-        "imgWrapper": {
-          "padding-top": "calc(75% + 15px)",
-          "position": "relative",
-          "height": "0"
+  <!-- shopify earrings bucket -->
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
         }
-      },
-      "title": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px"
-      },
-      "button": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "20px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        "color": "#39004d",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "price": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "22px",
-        "color": "#26cbd2",
-        "font-weight": "bold"
-      },
-      "compareAt": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "13.6px",
-        "color": "#26cbd2"
-      },
-      "unitPrice": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "13.6px",
-        "color": "#26cbd2"
+      } else {
+        loadScript();
       }
-    },
-    "text": {
-      "button": "Add to cart"
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
       }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        },
-        "color": "#39004d"
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px",
-        "color": "#4c4c4c"
-      },
-      "price": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "18px",
-        "color": "#4c4c4c"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      },
-      "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      }
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ],
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-        "button": {
-        "color": "#39004d",
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "color": "#39004d",
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "background-color": "#ffd480",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      },
-      "count": {
-        "font-size": "16px"
-      }
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  }
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-    </script>
-
-
-    <script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'sparkcles.myshopify.com',
-      storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: '264132067480',
-        node: document.getElementById('collection-component-1617904623729'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px",
-          "width": "calc(25% - 20px)"
-        },
-        "img": {
-          "height": "calc(100% - 15px)",
-          "position": "absolute",
-          "left": "0",
-          "right": "0",
-          "top": "0"
-        },
-        "imgWrapper": {
-          "padding-top": "calc(75% + 15px)",
-          "position": "relative",
-          "height": "0"
-        }
-      },
-      "title": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px"
-      },
-      "button": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "20px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        "color": "#39004d",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "price": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "22px",
-        "color": "#26cbd2",
-        "font-weight": "bold"
-      },
-      "compareAt": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "13.6px",
-        "color": "#26cbd2"
-      },
-      "unitPrice": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-size": "13.6px",
-        "color": "#26cbd2"
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        },
-        "color": "#39004d"
-      },
-      "quantityInput": {
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px"
-      },
-      "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px",
-        "color": "#4c4c4c"
-      },
-      "price": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "18px",
-        "color": "#4c4c4c"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      },
-      "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
-      }
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ],
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-        "button": {
-        "color": "#39004d",
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "font-size": "16px",
-        "padding-top": "16px",
-        "padding-bottom": "16px",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        "background-color": "#ffd480",
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "color": "#39004d",
-        "font-family": "Josefin Slab, sans-serif",
-        "font-weight": "bold",
-        "background-color": "#ffd480",
-        ":hover": {
-            "background-color": "#ffcc66"
-        },
-        ":focus": {
-            "background-color": "#ffcc66"
-        }
-      },
-      "count": {
-        "font-size": "16px"
-      }
-    },
-    "googleFonts": [
-      "Josefin Slab"
-    ]
-  }
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-    </script>
-
-
-
-    
-    <script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'sparkcles.myshopify.com',
-      storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: '264347123864',
-        node: document.getElementById('collection-component-1618092526870'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-            "product": {
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'sparkcles.myshopify.com',
+          storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '264016625816',
+            node: document.getElementById('collection-component-1617744041727'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
                 "styles": {
-                    "product": {
-                        "@media (min-width: 601px)": {
-                            "max-width": "calc(25% - 20px)",
-                            "margin-left": "20px",
-                            "margin-bottom": "50px",
-                            "width": "calc(25% - 20px)"
-                        },
-                        "img": {
-                            "height": "calc(100% - 15px)",
-                            "position": "absolute",
-                            "left": "0",
-                            "right": "0",
-                            "top": "0"
-                        },
-                        "imgWrapper": {
-                            "padding-top": "calc(75% + 15px)",
-                            "position": "relative",
-                            "height": "0"
-                        }
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                      "width": "calc(25% - 20px)"
                     },
-                    "title": {
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "26px"
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
                     },
-                    "button": {
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "20px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px",
-                        "color": "#39004d",
-                        ":hover": {
-                            "background-color": "#ffcc66"
-                        },
-                        "background-color": "#ffd480",
-                        ":focus": {
-                            "background-color": "#ffcc66"
-                        }
-                    },
-                    "quantityInput": {
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px"
-                    },
-                    "price": {
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-size": "22px",
-                        "color": "#26cbd2",
-                        "font-weight": "bold"
-                    },
-                    "compareAt": {
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-size": "13.6px",
-                        "color": "#26cbd2"
-                    },
-                    "unitPrice": {
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-size": "13.6px",
-                        "color": "#26cbd2"
+                    "imgWrapper": {
+                      "padding-top": "calc(75% + 15px)",
+                      "position": "relative",
+                      "height": "0"
                     }
+                  },
+                  "title": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px"
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "20px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    "color": "#39004d",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "price": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "22px",
+                    "color": "#26cbd2",
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  },
+                  "unitPrice": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  }
                 },
                 "text": {
-                    "button": "Add to cart"
+                  "button": "Add to cart"
                 },
                 "googleFonts": [
                   "Josefin Slab"
                 ]
-            },
-            "productSet": {
+              },
+              "productSet": {
                 "styles": {
-                    "products": {
-                        "@media (min-width: 601px)": {
-                            "margin-left": "-20px"
-                        }
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
                     }
+                  }
                 }
-            },
-            "modalProduct": {
+              },
+              "modalProduct": {
                 "contents": {
-                    "img": false,
-                    "imgWithCarousel": true,
-                    "button": false,
-                    "buttonWithQuantity": true
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
                 },
                 "styles": {
-                    "product": {
-                        "@media (min-width: 601px)": {
-                            "max-width": "100%",
-                            "margin-left": "0px",
-                            "margin-bottom": "0px"
-                        }
-                    },
-                    "button": {
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px",
-                        ":hover": {
-                            "background-color": "#ffcc66"
-                        },
-                        "background-color": "#ffd480",
-                        ":focus": {
-                            "background-color": "#ffcc66"
-                        },
-                        "color": "#39004d"
-                    },
-                    "quantityInput": {
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px"
-                    },
-                    "title": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "26px",
-                        "color": "#4c4c4c"
-                    },
-                    "price": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "normal",
-                        "font-size": "18px",
-                        "color": "#4c4c4c"
-                    },
-                    "compareAt": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "normal",
-                        "font-size": "15.299999999999999px",
-                        "color": "#4c4c4c"
-                    },
-                    "unitPrice": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "normal",
-                        "font-size": "15.299999999999999px",
-                        "color": "#4c4c4c"
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
                     }
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    },
+                    "color": "#39004d"
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "title": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    "color": "#4c4c4c"
+                  },
+                  "price": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "color": "#4c4c4c"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "unitPrice": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  }
                 },
                 "googleFonts": [
                   "Josefin Slab"
                 ],
                 "text": {
-                    "button": "Add to cart"
+                  "button": "Add to cart"
                 }
-            },
-            "option": {},
-            "cart": {
+              },
+              "option": {},
+              "cart": {
                 "styles": {
-                    "button": {
-                        "color": "#39004d",
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "16px",
-                        "padding-top": "16px",
-                        "padding-bottom": "16px",
-                        ":hover": {
-                            "background-color": "#ffcc66"
-                        },
-                        "background-color": "#ffd480",
-                        ":focus": {
-                            "background-color": "#ffcc66"
-                        }
+                  "button": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
                     }
+                  }
                 },
                 "text": {
-                    "total": "Subtotal",
-                    "button": "Checkout"
+                  "total": "Subtotal",
+                  "button": "Checkout"
                 },
                 "googleFonts": [
                   "Josefin Slab"
                 ]
-            },
-            "toggle": {
+              },
+              "toggle": {
                 "styles": {
-                    "toggle": {
-                        "color": "#39004d",
-                        "font-family": "Josefin Slab, sans-serif",
-                        "font-weight": "bold",
-                        "background-color": "#ffd480",
-                        ":hover": {
-                            "background-color": "#ffcc66"
-                        },
-                        ":focus": {
-                            "background-color": "#ffcc66"
-                        }
+                  "toggle": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "background-color": "#ffd480",
+                    ":hover": {
+                      "background-color": "#ffcc66"
                     },
-                    "count": {
-                        "font-size": "16px"
+                    ":focus": {
+                      "background-color": "#ffcc66"
                     }
+                  },
+                  "count": {
+                    "font-size": "16px"
+                  }
                 },
                 "googleFonts": [
                   "Josefin Slab"
                 ]
-            }
-        },
-      });
-    });
-}
-})();
+              }
+            },
+          });
+        });
+      }
+    })();
 /*]]>*/
-    </script>
+  </script>
+
+  <!-- shopify hand embellished prints bucket -->
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'sparkcles.myshopify.com',
+          storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '264132100248',
+            node: document.getElementById('collection-component-1617904324375'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                      "width": "calc(25% - 20px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    },
+                    "imgWrapper": {
+                      "padding-top": "calc(75% + 15px)",
+                      "position": "relative",
+                      "height": "0"
+                    }
+                  },
+                  "title": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px"
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "20px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    "color": "#39004d",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "price": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "22px",
+                    "color": "#26cbd2",
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  },
+                  "unitPrice": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    },
+                    "color": "#39004d"
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "title": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    "color": "#4c4c4c"
+                  },
+                  "price": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "color": "#4c4c4c"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "unitPrice": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ],
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {},
+              "cart": {
+                "styles": {
+                  "button": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "background-color": "#ffd480",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  },
+                  "count": {
+                    "font-size": "16px"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              }
+            },
+          });
+        });
+      }
+    })();
+/*]]>*/
+  </script>
+
+
+  <!-- shofipfy originals bucket -->
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'sparkcles.myshopify.com',
+          storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '264132067480',
+            node: document.getElementById('collection-component-1617904623729'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                      "width": "calc(25% - 20px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    },
+                    "imgWrapper": {
+                      "padding-top": "calc(75% + 15px)",
+                      "position": "relative",
+                      "height": "0"
+                    }
+                  },
+                  "title": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px"
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "20px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    "color": "#39004d",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "price": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "22px",
+                    "color": "#26cbd2",
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  },
+                  "unitPrice": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    },
+                    "color": "#39004d"
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "title": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    "color": "#4c4c4c"
+                  },
+                  "price": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "color": "#4c4c4c"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "unitPrice": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ],
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {},
+              "cart": {
+                "styles": {
+                  "button": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "background-color": "#ffd480",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  },
+                  "count": {
+                    "font-size": "16px"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              }
+            },
+          });
+        });
+      }
+    })();
+/*]]>*/
+  </script>
+
+
+
+  <!-- shopify prints bucket -->
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'sparkcles.myshopify.com',
+          storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '264347123864',
+            node: document.getElementById('collection-component-1618092526870'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                      "width": "calc(25% - 20px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    },
+                    "imgWrapper": {
+                      "padding-top": "calc(75% + 15px)",
+                      "position": "relative",
+                      "height": "0"
+                    }
+                  },
+                  "title": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px"
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "20px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    "color": "#39004d",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "price": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "22px",
+                    "color": "#26cbd2",
+                    "font-weight": "bold"
+                  },
+                  "compareAt": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  },
+                  "unitPrice": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    },
+                    "color": "#39004d"
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "title": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    "color": "#4c4c4c"
+                  },
+                  "price": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "color": "#4c4c4c"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "unitPrice": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ],
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {},
+              "cart": {
+                "styles": {
+                  "button": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    "background-color": "#ffd480",
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "color": "#39004d",
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "background-color": "#ffd480",
+                    ":hover": {
+                      "background-color": "#ffcc66"
+                    },
+                    ":focus": {
+                      "background-color": "#ffcc66"
+                    }
+                  },
+                  "count": {
+                    "font-size": "16px"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              }
+            },
+          });
+        });
+      }
+    })();
+/*]]>*/
+  </script>
+
+  <!-- earrings with popup
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'sparkcles.myshopify.com',
+          storefrontAccessToken: 'c3de254f87bd30ea4e06e73cd810eadf',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '264347123864',
+            node: document.getElementById('collection-component-1636906132898'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                      "width": "calc(25% - 20px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    },
+                    "imgWrapper": {
+                      "padding-top": "calc(75% + 15px)",
+                      "position": "relative",
+                      "height": "0"
+                    }
+                  },
+                  "title": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "19px"
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#e6c302"
+                    },
+                    "background-color": "#ffd902",
+                    ":focus": {
+                      "background-color": "#e6c302"
+                    }
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "price": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "16px",
+                    "color": "#26cbd2"
+                  },
+                  "compareAt": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  },
+                  "unitPrice": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-size": "13.6px",
+                    "color": "#26cbd2"
+                  }
+                },
+                "buttonDestination": "modal",
+                "contents": {
+                  "options": false
+                },
+                "text": {
+                  "button": "View product"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#e6c302"
+                    },
+                    "background-color": "#ffd902",
+                    ":focus": {
+                      "background-color": "#e6c302"
+                    }
+                  },
+                  "quantityInput": {
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px"
+                  },
+                  "title": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    "color": "#4c4c4c"
+                  },
+                  "price": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "color": "#4c4c4c"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "unitPrice": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ],
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {},
+              "cart": {
+                "styles": {
+                  "button": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "16px",
+                    "padding-top": "16px",
+                    "padding-bottom": "16px",
+                    ":hover": {
+                      "background-color": "#e6c302"
+                    },
+                    "background-color": "#ffd902",
+                    ":focus": {
+                      "background-color": "#e6c302"
+                    }
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "font-family": "Josefin Slab, sans-serif",
+                    "font-weight": "bold",
+                    "background-color": "#ffd902",
+                    ":hover": {
+                      "background-color": "#e6c302"
+                    },
+                    ":focus": {
+                      "background-color": "#e6c302"
+                    }
+                  },
+                  "count": {
+                    "font-size": "16px"
+                  }
+                },
+                "googleFonts": [
+                  "Josefin Slab"
+                ]
+              }
+            },
+          });
+        });
+      }
+    })();
+  /*]]>*/
+  </script>
+-->
 
 </head>
 
-
-
 <body>
 
-    <center>
-        <img src="sparkcles-header.png" alt="Sparckles" width="50%" height="auto">
+  <!-- ======= Top Bar =======
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
 
-        <!-- originals -->
-        <h1> Originals </h1>
-        <div id='collection-component-1617904623729'></div>
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
+      </div>
 
-        <!-- prints -->
-        <h1> Prints </h1>
-        <div id='collection-component-1618092526870'></div>
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+          <li>En</li>
+          <li><a href="#">De</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  -->
 
-        <!-- hand embellished prints -->
-        <h1> Hand embellished prints </h1>
-        <div id='collection-component-1617904324375'></div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-        <!-- earrings -->
-        <h1> Earrings </h1>
-        <div id='collection-component-1617744041727'></div>
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Sparkcles</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    </center>
-    
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li class="dropdown"><a href="#menu"><span>Shop</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#originals">Originals</a></li>
+              <li><a href="#prints">Prints</a></li>
+              <li><a href="#handembell">Hand embellished prints</a></li>
+              <li><a href="#earrings">Earrings</a></li>
+              <li><a href="https://www.bonfire.com/store/sparkcles/">Apparel</a></li>
+            </ul>
+          </li>
+          <!--<li><a class="nav-link scrollto" href="#specials">Commissions</a></li>-->
+          <!--<li><a class="nav-link scrollto" href="#events">Events</a></li>-->
+          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a commission</a>
 
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-4 align-items-center justify-content-center">
+          <section id="welcome" class="welcome">
+            <div class="col-lg-12 d-flex align-items-center justify-content-center position-relative">
+              <h1>Welcome</h1>
+            </div>
+
+            <div class="col-lg-12 d-flex align-items-center justify-content-center position-relative">
+              <h2>Creativity for the soul</h2>
+            </div>
+
+            <div class="btns col-lg-12 d-flex align-items-center justify-content-center position-relative">
+              <a href="#menu" class="btn-menu animated fadeInUp scrollto">Art</a>
+              <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book me</a>
+            </div>
+
+            <div class="col-lg-12 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in"
+              data-aos-delay="200">
+              <a href="https://youtu.be/FjhfvZHmGDc" class="glightbox play-btn"></a>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="col-lg-8">
+          <img src="assets/img/sparkcles-header.png" alt="Sparckles" width="100%" height="auto">
+        </div>
+
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-1" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="assets/img/about-me-img.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-2 content">
+            <h3>About Sparkcles</h3>
+            <p>A self taught artist from Argentina, Sparkcles, also known as Camila Sanchez, has been experimenting with
+              mediums
+              since she was a little girl. Drawing her inspiration from life, her work reflects the magic in every day
+              life.
+              The wonder of our world captivates and motivates her. Her color pallette is bright and energetic, with
+              pastel tones.Gratitude is a big theme among her pieces,
+              reflecting on the loving relationship between ourselves, our loved ones, and our world.<br><br>
+              Camila always has her heart open inviting inspiration.
+              "Life is art, a beautiful dance of stardust and light", she shares."Every particle dancing to the beat of
+              love".
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>What I do</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>
+                <div class="icon"><i class="bx bx-paint"></i></div>
+              </span>
+              <h4>Painting</h4>
+              <p>I take on commissions of all shapes and sizes including murals and even houses. Give me your weirdest
+                idea and I'll bring it to life.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>
+                <div class="icon"><i class="bi bi-display"></i></div>
+              </span>
+              <h4>Digital art</h4>
+              <p>Logos, social media content, as well as video game graphics. All this while maintaining that hand-drawn
+                feel.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>
+                <div class="icon"><i class="bi bi-diamond"></i></div>
+              </span>
+              <h4>Jewelry</h4>
+              <p>My jewelry is wearable art including but not limited to copper wire, clay and laminated accesories </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Shop</p>
+        </div>
+
+        <div class="text-center">
+          <!-- originals -->
+          <section id="originals" class="originals">
+            <h1> Originals </h1>
+            <div id='collection-component-1617904623729'></div>
+          </section>
+
+          <!-- prints -->
+          <section id="prints" class="prints">
+            <h1> Prints </h1>
+            <div id='collection-component-1618092526870'></div>
+          </section>
+
+          <!-- hand embellished prints -->
+          <section id="handembell" class="handembell">
+            <h1> Hand embellished prints </h1>
+            <div id='collection-component-1617904324375'></div>
+          </section>
+
+          <!-- earrings -->
+          <section id="earrings" class="earrings">
+            <h1> Earrings </h1>
+            <div id='collection-component-1617744041727'></div>
+          </section>
+
+        </div>
+
+        <!--
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-starters">Starters</li>
+              <li data-filter=".filter-salads">Salads</li>
+              <li data-filter=".filter-specialty">Specialty</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Lobster Bisque</a><span>$5.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Bread Barrel</a><span>$6.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Crab Cake</a><span>$7.95</span>
+            </div>
+            <div class="menu-ingredients">
+              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/caesar.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Caesar Selections</a><span>$8.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Tuscan Grilled</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/mozzarella.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Mozzarella Stick</a><span>$4.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Greek Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Fresh spinach, crisp romaine, tomatoes, and Greek olives
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Spinach Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Lobster Roll</a><span>$12.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+            </div>
+          </div>
+
+        </div>
+        -->
+      </div>
+    </section><!-- End Menu Section -->
+
+    <!-- ======= Specials Section =======
+    <section id="specials" class="specials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Custom designs</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Architecto ut aperiam autem id</h3>
+                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer
+                      a videna mareta paulona marka</p>
+                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa
+                      odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni
+                      nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Et blanditiis nemo veritatis excepturi</h3>
+                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer
+                      a videna mareta paulona marka</p>
+                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt
+                      est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque
+                      beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/specials-2.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus
+                      non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque
+                      necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum
+                      odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/specials-3.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis
+                      delectus</p>
+                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam
+                      fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores
+                      sed qui veritatis aperiam quia a laborum inventore</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/specials-4.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut
+                      quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae
+                      molestiae voluptate vel</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/specials-5.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>End Specials Section -->
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="10"> 
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="assets/img/comics/flower-bear.png" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="assets/img/comics/rhythm-harmony.png" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="assets/img/comics/ur-cool.png" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="assets/img/comics/u-matter.png" class="img-fluid" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="assets/img/comics/appreciate.png" class="img-fluid" alt="">
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Events Section -->
+
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Book a commission</p>
+        </div>
+
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up"
+          data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone"
+                data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" name="date" class="form-control" id="date" placeholder="Date for completion" data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="number" class="form-control" name="people" id="type" placeholder="Type of commission"
+                data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your
+              reservation. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Book me</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+    <!-- ======= Testimonials Section =======
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What they say about my work</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
+                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <p>Gallery</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-4.pn" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-4.png" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Chefs Section =======
+    <section id="chefs" class="chefs">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Chefs</h2>
+          <p>Our Proffesional Chefs</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Master Chef</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Patissier</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>Cook</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Chefs Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Contact Me</p>
+        </div>
+      </div>
+
+      <!--
+      <div data-aos="fade-up">
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div>
+      -->
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-3 social-links">
+
+          <div class="col-md-2">
+            <div class="info">
+              <div class="email">
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <h4>Instagram</h4>
+              </div>
+
+              <div class="open-hours">
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <h4>Facebook</h4>
+                </p>
+              </div>
+
+              <div class="address">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <h4>Twitter</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sparkcles</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
