@@ -5,8 +5,8 @@
         $name = $_POST['name'];
         $mailFrom = $_POST['email'];
         $phone = $_POST['phone'];
-        $mailFrom = $_POST['date'];
-        $name = $_POST['type'];
+        $date = $_POST['date'];
+        $type = $_POST['type'];
 
         $mailTo = "sparkcles@mail.com";
         $headers = "From: ".$nameFrom;
