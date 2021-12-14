@@ -9,10 +9,10 @@
         $type = $_POST['type'];
 
         $mailTo = "sparkcles@mail.com";
-        $headers = "From: ".$nameFrom;
-        $txt = "New contact from " .$name.".\n\n".$message;
+        $headers = "From: ".$mailFrom;
+        $txt = "New commission request from " .$name.".\n\n".$message;
 
-        mail(mailTo, $subject, $headers, $txt);
+        mail(mailTo, $type, $txt, $headers);
         header("Location: index.php?mailsend");
     }
 
