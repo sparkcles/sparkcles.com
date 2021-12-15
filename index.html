@@ -1269,11 +1269,11 @@
           <!--<li><a class="nav-link scrollto" href="#specials">Commissions</a></li>-->
           <!--<li><a class="nav-link scrollto" href="#events">Events</a></li>-->
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <!--<li><a class="nav-link scrollto" href="#contact">Contact</a></li>-->
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <!--<a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a commission</a>-->
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a commission</a>
 
     </div>
   </header><!-- End Header -->
@@ -1294,7 +1294,7 @@
 
             <div class="btns col-lg-12 d-flex align-items-center justify-content-center position-relative">
               <a href="#menu" class="btn-menu animated fadeInUp scrollto">Art</a>
-              <!--<a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book me</a>-->
+              <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book me</a>
             </div>
 
             <div class="col-lg-12 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in"
@@ -1691,7 +1691,7 @@
       </div>
     </section><!-- End Events Section -->
 
-    <!-- ======= Book A Table Section =======
+    <!-- ======= Book A Table Section ======= -->
     <section id="book-a-table" class="book-a-table">
       <div class="container" data-aos="fade-up">
 
@@ -1699,9 +1699,11 @@
           <p>Book a commission</p>
         </div>
 
-        <form action="forms/book-me.php" method="post" role="form" class="php-email-form" data-aos="fade-up"
-          data-aos-delay="100">
+        <form action="https://formsubmit.co/sparkcles.art@gmail.com" method="POST" class="php-email-form" data-aos="fade-up"
+        data-aos-delay="100">
           <div class="row">
+            <input type="hidden" name="_next" value="https://sparkcles.com/thanks.html">
+
             <div class="col-lg-4 col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars">
@@ -1742,7 +1744,7 @@
         </form>
 
       </div>
-    </section> End Book A Table Section -->
+    </section> <!-- End Book A Table Section -->
 
     <!-- ======= Testimonials Section =======
     <section id="testimonials" class="testimonials section-bg">
@@ -2019,8 +2021,9 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="forms/contact-me.php" method="post" class="php-email-form">
+            <form action="https://formsubmit.co/sparkcles.art@gmail.com" method="POST" class="php-email-form">
               <div class="row">
+                <input type="hidden" name="_next" value="https://sparkcles.com/thanks.html">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
