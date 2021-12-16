@@ -954,6 +954,7 @@ section {
   animation: fadeIn 0.5s ease-out;
 }
 .specials .details h3 {
+  /*text-align: center;*/
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -961,6 +962,7 @@ section {
 }
 .specials .details p {
   color: #aaaaaa;
+  text-align: left;
 }
 .specials .details p:last-child {
   margin-bottom: 0;
