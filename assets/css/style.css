@@ -1120,7 +1120,7 @@ section {
   font-size: 14px;
   background: #b1ece0;
   border-color: #625b4b;
-  color: white;
+  color: rgb(45, 5, 46);
 }
 .book-a-table .php-email-form input::-moz-placeholder, .book-a-table .php-email-form textarea::-moz-placeholder {
   color: #a49b89;
@@ -1394,7 +1394,7 @@ section {
   font-size: 14px;
   background: #b1ece0;
   border-color: #625b4b;
-  color: white;
+  color: rgb(30, 1, 39);
 }
 .contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
   color: #a49b89;
