@@ -1251,7 +1251,7 @@ section {
 }
 
 .gallery-2 {
-  background-image: url("../img/gallery/gallery-2.jpg");
+  background-image: url("../img/gallery/gallery-2.png");
   width: 375px;
   height: 375px;
   background-position: center center;
@@ -1262,7 +1262,7 @@ section {
 }
 
 .gallery-3 {
-  background-image: url("../img/gallery/gallery-3.jpg");
+  background-image: url("../img/gallery/gallery-3.png");
   width: 375px;
   height: 375px;
   background-position: center center;
@@ -1295,7 +1295,7 @@ section {
 }
 
 .gallery-6 {
-  background-image: url("../img/gallery/gallery-6.jpg");
+  background-image: url("../img/gallery/gallery-6.jpeg");
   width: 375px;
   height: 375px;
   background-position: center center;
@@ -1317,7 +1317,18 @@ section {
 }
 
 .gallery-8 {
-  background-image: url("../img/gallery/gallery-8.jpg");
+  background-image: url("../img/gallery/gallery-8.jpeg");
+  width: 375px;
+  height: 375px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+}
+
+.gallery-9 {
+  background-image: url("../img/gallery/gallery-9.jpeg");
   width: 375px;
   height: 375px;
   background-position: center center;
