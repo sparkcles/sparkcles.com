@@ -932,6 +932,12 @@ section {
 /*--------------------------------------------------------------
 # Specials
 --------------------------------------------------------------*/
+
+.specials .border {
+  border: 3px solid black !important;
+  margin: 14px;
+}
+
 .specials {
   overflow: hidden;
 }
