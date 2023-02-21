@@ -1243,12 +1243,13 @@ section {
 
 .gallery-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .gallery-container figure {
-  flex: 1 1 20em;
-  height: 20em;
+  flex: 0 1 30vh;
+  height: 30vh;
   margin: 0;
   max-width: 100%;
 }
@@ -1257,7 +1258,7 @@ section {
   overflow: hidden;
   border: 2px solid white;
   height: 100%;
-  width: 300px;
+  width: 100%;
   margin: 5px 0;
   transition: all ease-in-out 0.4s;
 }
